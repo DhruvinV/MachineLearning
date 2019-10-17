@@ -229,7 +229,7 @@ def Train(model, forward, backward, update, eps, momentum, num_epochs,
             - valid_acc:      Validation accuracy.
     """
     inputs_train, inputs_valid, inputs_test, target_train, target_valid, \
-        target_test = LoadData('/Users/dhruvin/Desktop/Fall 2019/CSC311/q3_materials/toronto_face.npz')
+        target_test = LoadData('/h/u8/c9/00/vekariya/Desktop/CSC311/q3_materials/toronto_face.npz')
     rnd_idx = np.arange(inputs_train.shape[0])
     train_ce_list = []
     valid_ce_list = []
@@ -281,7 +281,7 @@ def Train(model, forward, backward, update, eps, momentum, num_epochs,
         valid_acc_list.append((epoch, valid_acc))
         # DisplayPlot(train_ce_list, valid_ce_list, 'Cross Entropy', number=0)
         # DisplayPlot(train_acc_list, valid_acc_list, 'Accuracy', number=1)
-        # plt.plot(train_ce_list, valid_ce_list, 'Cross Entropy', number=0)   
+        # plt.plot(train_ce_list, valid_ce_list, 'Cross Entropy', number=0)
     # plt.show()
     print()
     train_ce, train_acc = Evaluate(
@@ -302,9 +302,9 @@ def Train(model, forward, backward, update, eps, momentum, num_epochs,
         'valid_acc': valid_acc_list
     }
    #####
-    
+
     # plt.plot(train_acc_list, valid_acc_list, 'Accuracy', number=1)
-    
+
    #####
     return model, stats
 
@@ -379,7 +379,7 @@ def main():
     eps = 0.04
     momentum = 0.09
     num_epochs = 1000
-    batch_size = 400  
+    batch_size = 400
 
     # Input-output dimensions.
     num_inputs = 2304
